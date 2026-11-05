@@ -1,0 +1,20 @@
+<style>
+body { font-family: Arial; background: #f0f2f5; display: flex; justify-content: center; padding-top: 40px; }
+.card { background: white; padding: 30px; border-radius: 15px; width: 500px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; }
+h1 { color: #1a73e8; }
+.btn { display: inline-block; background: #1a73e8; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 15px 0; }
+.item { background: #f8f9fa; padding: 12px; border-radius: 8px; margin: 8px 0; text-align: left; }
+</style>
+
+<div class="card">
+<h1>🎓 AI Student Prediction</h1>
+<p>Predict student performance using Machine Learning</p>
+<a class="btn" href="/predict/">+ Add New Prediction</a>
+<hr>
+<h3>Recent Predictions</h3>
+{% for s in students %}
+<div class="item"><b>{{ s.name }}</b><br>Predicted: {{ s.predicted_marks }} - {{ s.result }}</div>
+{% empty %}
+<p>No data yet. Add your first prediction!</p>
+{% endfor %}
+</div>

@@ -1,0 +1,18 @@
+<style>
+body { font-family: Arial; background: #e8f5e9; display: flex; justify-content: center; padding-top: 80px; }
+.card { background: white; padding: 40px; border-radius: 15px; width: 420px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; }
+h1 { color: #2e7d32; }
+.marks { font-size: 50px; color: #1a73e8; margin: 10px 0; font-weight: bold; }
+.btn { display: inline-block; background: #1a73e8; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; margin: 5px; }
+.btn2 { background: #34a853; }
+</style>
+
+<div class="card">
+<h1>✅ Prediction Result</h1>
+<p>Student Performance Predicted Successfully</p>
+<div class="marks">{{ marks }} / 100</div>
+<h3>Status: {{ result }}</h3>
+<br>
+<a class="btn" href="/">Go to Home</a>
+<a class="btn btn2" href="/predict/">Predict Another</a>
+</div>
